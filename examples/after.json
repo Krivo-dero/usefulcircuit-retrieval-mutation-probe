@@ -1,0 +1,22 @@
+{
+  "context": {
+    "query_sha256": "cae953c556a148e33f9797281cf6a56aa39126b7259080eee165afaabceacb52",
+    "authorization_sha256": "1965f340f556f6aefb64a68b6a3adb43eb0859164c2cd3a7c0e8a07e1fa0b378",
+    "eligible_corpus_sha256": "e0d77ce6ede54a671cf90a2bed62919646e0947b00634230606f4a3ca9bc1cc2",
+    "retrieval_config_sha256": "2e12f132c9c1be0a3d8dae2e791b7ab4d00ae73683aa2484b98cd5d68c0801e2",
+    "k": 2
+  },
+  "results": [
+    {
+      "id": "2",
+      "score": -0.5108256237659907
+    },
+    {
+      "id": "1",
+      "score": -1.375e-06
+    }
+  ],
+  "diagnostics": {
+    "returned_count": 2
+  }
+}

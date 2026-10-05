@@ -1,0 +1,127 @@
+{
+  "engine": "SQLite FTS5",
+  "sqlite_version": "3.53.4",
+  "sqlite_source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+  "query": "alpha OR beta",
+  "all_passed": true,
+  "check_count": 12,
+  "checks": [
+    {
+      "name": "unchanged_repeat",
+      "passed": true
+    },
+    {
+      "name": "baseline_has_strict_score_margin",
+      "passed": true
+    },
+    {
+      "name": "insert_changes_first_public_hit",
+      "passed": true
+    },
+    {
+      "name": "restricted_row_never_returned",
+      "passed": true
+    },
+    {
+      "name": "public_content_unchanged",
+      "passed": true
+    },
+    {
+      "name": "separate_scope_insert_control",
+      "passed": true
+    },
+    {
+      "name": "update_reverses_public_order",
+      "passed": true
+    },
+    {
+      "name": "separate_scope_update_control",
+      "passed": true
+    },
+    {
+      "name": "delete_restores_baseline",
+      "passed": true
+    },
+    {
+      "name": "nonmatching_row_changes_scores",
+      "passed": true
+    },
+    {
+      "name": "separate_scope_nonmatching_control",
+      "passed": true
+    },
+    {
+      "name": "public_content_still_unchanged",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "restricted_insert": {
+      "before": [
+        {
+          "id": "1",
+          "score": -1.375e-06
+        },
+        {
+          "id": "2",
+          "score": -1e-06
+        }
+      ],
+      "after": [
+        {
+          "id": "2",
+          "score": -0.5108256237659907
+        },
+        {
+          "id": "1",
+          "score": -1.375e-06
+        }
+      ]
+    },
+    "restricted_update": {
+      "before": [
+        {
+          "id": "2",
+          "score": -0.5108256237659907
+        },
+        {
+          "id": "1",
+          "score": -1.375e-06
+        }
+      ],
+      "after": [
+        {
+          "id": "1",
+          "score": -0.7023852326782373
+        },
+        {
+          "id": "2",
+          "score": -1e-06
+        }
+      ]
+    },
+    "restricted_nonmatching_insert": {
+      "before": [
+        {
+          "id": "1",
+          "score": -1.375e-06
+        },
+        {
+          "id": "2",
+          "score": -1e-06
+        }
+      ],
+      "after": [
+        {
+          "id": "1",
+          "score": -0.9556574220577162
+        },
+        {
+          "id": "2",
+          "score": -0.8312724233119394
+        }
+      ]
+    }
+  },
+  "limits": "Synthetic two-public-row fixture on the recorded SQLite build. Not a production exploit, a vector-engine test, or a complete side-channel audit. Scope partition is a fixture control, not a universal security guarantee."
+}
